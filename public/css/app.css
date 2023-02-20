@@ -41,3 +41,33 @@ section.hero {
 .card {
   border: 2px solid rgb(255, 119, 0);
 }
+
+.btn-primary {
+  background: rgb(255, 119, 0);
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: rgb(255, 25, 25);
+}
+
+section.cart {
+  background: rgb(255, 226, 226);
+}
+section.cart .amount {
+  color: rgb(255, 119, 0);
+}
+
+section.login {
+  background: rgb(255, 226, 226);
+  min-height: calc(100vh - 86px);
+}
+section.login a {
+  color: rgb(255, 119, 0);
+}
+section.login a:hover {
+  color: rgb(255, 25, 25);
+}
+
+form {
+  border: 2px solid rgb(255, 119, 0);
+}
