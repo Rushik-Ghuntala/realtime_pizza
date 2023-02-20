@@ -1,0 +1,39 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+  height: 4000px;
+}
+
+nav li:last-child a {
+  background: rgb(255, 119, 0);
+}
+nav li:last-child a:hover {
+  background: rgb(255, 25, 25);
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: rgb(255, 119, 0);
+}
+
+section.hero {
+  background: rgb(255, 226, 226);
+}
+
+.size {
+  background: rgb(255, 226, 226);
+}
+
+.add-to-cart {
+  border: 2px solid rgb(255, 119, 0);
+  color: rgb(255, 119, 0);
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: rgb(255, 119, 0);
+  border-color: white;
+  color: white;
+}
