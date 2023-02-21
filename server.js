@@ -9,7 +9,10 @@ const mongoose = require('mongoose')
 
 
 //Database connection
-
+const url = 'mongodb://127.0.0.1:27017/pizza'
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
+    .then(result => console.log('Database connected...'))
+    .catch(err => console.log(err))
 
 
 //Assets
