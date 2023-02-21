@@ -68,6 +68,6 @@ section.login a:hover {
   color: rgb(255, 25, 25);
 }
 
-form {
+form.form2 {
   border: 2px solid rgb(255, 119, 0);
 }
