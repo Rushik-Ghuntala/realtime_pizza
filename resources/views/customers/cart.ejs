@@ -9,38 +9,22 @@
         </div>
 
         <div class="pizza-list  border-b border-gray-500">
+
+            <% for(let pizza of Object.values( session.cart.items ) ) { %>
+
             <div class="flex items-center my-4">
-                <img class="w-24" src="/img/pizza.png" alt="">
+                <img class="w-24" src="/img/<%= pizza.item.image %>" alt="">
                 <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
+                    <h1><%= pizza.item.name %></h1>
+                    <span><%= pizza.item.size %></span>
                 </div>
                 <span class="flex-1">1 Pcs</span>
                 <span class="font-bold text-lg">$25</span>
                 
             </div>
 
-            <div class="flex items-center my-4">
-                <img class="w-24" src="/img/pizza.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">$25</span>
-                
-            </div>
+            <% } %>
 
-            <div class="flex items-center my-4">
-                <img class="w-24" src="/img/pizza.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">$25</span>
-                
-            </div>
         </div>
 
         <div class="text-right py-4">
