@@ -13,13 +13,13 @@
             <% for(let pizza of Object.values(session.cart.items)) { %>
 
             <div class="flex items-center my-4">
-                <img class="w-24" src="/img/<%= pizza.item.image %>" alt="">
+                <img class="w-24" src="/img/" alt="">
                 <div class="flex-1 ml-4">
                     <h1>h</h1>
                     <span>j</span>
                 </div>
-                <span class="flex-1">1 Pcs</span>
-                <span class="font-bold text-lg">$25</span>
+                <span class="flex-1"><%= pizza.qty %> Pcs</span>
+                <span class="font-bold text-lg">$<%= pizza.item.price %></span>
                 
             </div>
 
