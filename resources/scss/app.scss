@@ -1,4 +1,7 @@
 @import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 
 body {
     font-family: 'Lato', sans-serif;
@@ -75,4 +78,9 @@ section.login {
 
 form.form2 {
     border: 2px solid $primary;
+}
+
+.noty_theme_mint {
+    border-radius: 50px!important;
+    padding-left: 8px!important;
 }
