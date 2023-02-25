@@ -9,7 +9,7 @@ let cartCounter = document.querySelector('#cartCounter')
 
 function updateCart(pizza) {
     axios.post('/update-cart', pizza).then(res => {
-        //console.log(res)
+        console.log(res)
         cartCounter.innerText = res.data.totalQty
 
         new Noty({
@@ -36,6 +36,8 @@ addToCart.forEach((btn) => {
 
         let pizza = JSON.parse(btn.dataset.pizza)
         updateCart(pizza)
+
+        // let pizza = btn.dataset.pizza
         // console.log(pizza)
     })
 })

@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
 const MongoDbStore = require('connect-mongo')
-const { strict } = require('assert')
+// const { strict } = require('assert')
 
 //Database connection
 const url = 'mongodb://127.0.0.1:27017/pizza'
@@ -48,7 +48,7 @@ app.use(express.json())
 //global middlewares
 app.use((req, res, next) => {
     res.locals.session = req.session
-    next
+    next()
 })
 
 
