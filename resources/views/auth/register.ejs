@@ -14,23 +14,28 @@
               <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">start your 14-day free trial</a>
             </p> -->
           </div>
-          <form class="form2 mt-8 space-y-6 px-4 py-4 rounded-md" action="#" method="POST">
-            <input type="hidden" name="remember" value="true">
+          <form class="form2 mt-8 space-y-6 px-4 py-4 rounded-md" action="/register" method="POST">
+
+            <% if(messages.error) { %>
+            <span class="text-red-500 text-sm"><%= messages.error %></span>
+            <% } %>
+
+            <!-- <input type="hidden" name="remember" value="true"> -->
             <div class="-space-y-px rounded-md shadow-sm">
 
                 <div>
-                    <label for="email-address" class="block text-gray-700 text-sm font-bold mb-2 ">Name</label>
-                    <input id="name" name="name" type="text" autocomplete="name" required class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Enter your Name">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2 ">Name</label>
+                    <input id="name" name="name" value="<%= messages.name %>" type="text" autocomplete="name"  class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Enter your Name">
                 </div>
 
                 <div>
                     <label for="email-address" class="block text-gray-700 text-sm font-bold mb-2 mt-2">Email address</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Email address">
+                    <input id="email" name="email" value="<%= messages.email %>" type="email" autocomplete="email"  class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Email address">
                 </div>
 
                 <div>
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2 mt-2">Password</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Password">
+                    <input id="password" name="password" type="password" autocomplete="current-password"  class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 " placeholder="Password">
                 </div>
             </div>
       
