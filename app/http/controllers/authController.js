@@ -9,6 +9,16 @@ function authController() {
             res.render('auth/login')
         },
         postLogin(req, res, next){
+
+            const{email, password} = req.body;
+
+            //validate request
+            if( !email || !password){
+                req.flash('error', 'All fields are required...')
+                
+                return res.redirect('/login')
+            }
+
             passport.authenticate('local', (err, user, info) =>{
                 if(err){
                     req.flash('error', info.message)
@@ -48,7 +58,7 @@ function authController() {
             //check if email exist pr not
             User.exists({ email: email }, (err, result) => {
                 if(result){
-                req.flash('error', 'Loda email bijo nakh baki gand fadi nakish..')
+                req.flash('error', 'This email is already exists....')
                 req.flash('name', name)
                 req.flash('email', email)
                 return res.redirect('/register')
@@ -73,7 +83,7 @@ function authController() {
 
                 return res.redirect('/')
             }).catch(err => {
-                req.flash('error', 'KAIK KHOTU CHHE LODI')
+                req.flash('error', 'Somthing went wrong...')
                 
                 return res.redirect('/register')
             })
